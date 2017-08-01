@@ -7,7 +7,7 @@ window.onload = function() {
     
     function init() {
         game.scale.scaleMode = Phaser.ScaleManager.USER_SCALE;
-        game.scale.setUserScale(4, 4);
+        //game.scale.setUserScale(4, 4);
         game.renderer.renderSession.roundPixels = true;
         Phaser.Canvas.setImageRenderingCrisp(game.canvas);
         game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
@@ -60,6 +60,7 @@ window.onload = function() {
         player.animations.add('runU', [4, 5], 18, true);
         
         game.input.onDown.add(moveSprite, this);
+        game.input.onTap.add(moveSprite, this);
         
         
     }
