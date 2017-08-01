@@ -10,6 +10,11 @@ window.onload = function() {
         game.scale.setUserScale(4, 4);
         game.renderer.renderSession.roundPixels = true;
         Phaser.Canvas.setImageRenderingCrisp(game.canvas);
+        game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+        game.scale.pageAlignHorizontally = true;
+        game.scale.pageAlignVertically = true;
+        game.scale.setScreenSize(true);
+        game.inputEnabled = true;
     }
     
     function preload() {
